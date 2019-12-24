@@ -144,6 +144,6 @@ while(0 not in grid):
 
     if gridSame(oldGrid, grid):
         print("Loop detected, breaking")
-        # break;
-    
+        break;
+    # use deep copy because 2d array, one copy only copies the outer ring, the inner ring is still a reference
     oldGrid = copy.deepcopy(grid)
