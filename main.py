@@ -129,6 +129,9 @@ while(0 not in grid):
     for i in range(len(grid)):
         for j in range(len(grid[0])):
             if grid[i][j] == 0:
+                if len(allowed[i][j]) == 1:
+                    grid[i][j] = allowed[i][j][0]
+                    continue;
                 restOfSection = getRestOfSection(i,j,allowed)
                 # print("REST OF SECTION: ", restOfSection)
                 # print("ALLOWED IN SPOT: ", i,j," ", allowed[i][j])
